@@ -1,0 +1,6 @@
+Step,Topic,Description,Resources,Estimated_Time
+1,Python Basics,Learn syntax & data types,https://www.learnpython.org/,3 hrs
+2,NumPy & Pandas,Data manipulation,https://pandas.pydata.org/docs/,5 hrs
+3,Data Visualization,"Matplotlib, Seaborn",https://matplotlib.org/stable/tutorials/,4 hrs
+4,Machine Learning,Intro with Scikit-learn,https://scikit-learn.org/stable/,6 hrs
+5,Projects,Build data analysis apps,https://www.kaggle.com/learn,8 hrs
