@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Personalized Learning Path Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🚀</span>
+                <span class="brand-text">LearnPath AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#careers" class="nav-link">Careers</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section active-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Perfect Learning Journey</h1>
+                <p class="hero-description">
+                    Unlock your potential with AI-powered personalized learning paths tailored to your goals, 
+                    learning style, and schedule. Start your journey to career success today.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Career Paths</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Learning Resources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">AI-Powered</span>
+                        <span class="stat-label">Personalization</span>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg hero-cta" onclick="showSection('careers')">
+                    Generate My Learning Path
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Selection Section -->
+    <section id="careers" class="careers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Career Path</h2>
+                <p class="section-description">Select the career that aligns with your aspirations</p>
+                
+                <div class="search-container">
+                    <input type="text" class="form-control search-input" placeholder="Search careers..." id="careerSearch">
+                </div>
+            </div>
+
+            <div class="careers-grid" id="careersGrid">
+                <!-- Career cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalization Form Section -->
+    <section id="personalization" class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="form-title">Personalize Your Learning Journey</h2>
+                    <div class="progress-indicator">
+                        <div class="step active" data-step="1">1</div>
+                        <div class="step" data-step="2">2</div>
+                        <div class="step" data-step="3">3</div>
+                        <div class="step" data-step="4">4</div>
+                    </div>
+                </div>
+
+                <form id="personalizationForm" class="multi-step-form">
+                    <!-- Step 1: Basic Info -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Tell us about your current level</h3>
+                        <div class="form-group">
+                            <label class="form-label">Current Skill Level</label>
+                            <div class="radio-group" id="skillLevels">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Previous Experience</label>
+                            <textarea class="form-control" name="experience" placeholder="Tell us about your background and any relevant experience..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Learning Preferences -->
+                    <div class="form-step" data-step="2">
+                        <h3>How do you learn best?</h3>
+                        <div class="form-group">
+                            <label class="form-label">Learning Style</label>
+                            <div class="radio-group" id="learningStyles">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Learning Format</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="format" value="videos">
+                                    <span class="checkmark"></span>
+                                    Video Tutorials
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="format" value="articles">
+                                    <span class="checkmark"></span>
+                                    Articles & Documentation
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="format" value="interactive">
+                                    <span class="checkmark"></span>
+                                    Interactive Coding
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="format" value="projects">
+                                    <span class="checkmark"></span>
+                                    Hands-on Projects
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Time & Goals -->
+                    <div class="form-step" data-step="3">
+                        <h3>Your time and goals</h3>
+                        <div class="form-group">
+                            <label class="form-label">Time Commitment</label>
+                            <div class="radio-group" id="timeCommitments">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Timeline</label>
+                            <select class="form-control" name="timeline">
+                                <option value="">Select your goal timeline</option>
+                                <option value="3-months">3 Months (Intensive)</option>
+                                <option value="6-months">6 Months (Moderate)</option>
+                                <option value="12-months">12 Months (Flexible)</option>
+                                <option value="flexible">Flexible Timeline</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Specific Goals -->
+                    <div class="form-step" data-step="4">
+                        <h3>What are your specific goals?</h3>
+                        <div class="form-group">
+                            <label class="form-label">Career Goals</label>
+                            <textarea class="form-control" name="goals" placeholder="What do you want to achieve? (e.g., land a job, build a portfolio, start freelancing...)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Areas of Interest</label>
+                            <textarea class="form-control" name="interests" placeholder="Any specific technologies, industries, or areas you're particularly interested in?"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn--secondary" id="prevBtn" onclick="changeStep(-1)">Previous</button>
+                        <button type="button" class="btn btn--primary" id="nextBtn" onclick="changeStep(1)">Next</button>
+                        <button type="submit" class="btn btn--primary hidden" id="submitBtn">Generate Learning Path</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Display Section -->
+    <section id="learningPath" class="learning-path-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Personalized Learning Path</h2>
+                <p class="section-description" id="pathDescription"></p>
+                
+                <div class="path-actions">
+                    <button class="btn btn--secondary" onclick="showSection('careers')">Choose Different Career</button>
+                    <button class="btn btn--primary" onclick="showSection('resources')">View All Resources</button>
+                </div>
+            </div>
+
+            <div class="learning-timeline" id="learningTimeline">
+                <!-- Timeline will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Learning Resources</h2>
+                <p class="section-description">Comprehensive resources for your learning journey</p>
+                
+                <div class="resource-filters">
+                    <select class="form-control filter-select" id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="Free Course">Free Courses</option>
+                        <option value="Interactive">Interactive</option>
+                        <option value="Documentation">Documentation</option>
+                        <option value="University Course">University Courses</option>
+                        <option value="Book">Books</option>
+                    </select>
+                    <input type="text" class="form-control search-input" placeholder="Search resources..." id="resourceSearch">
+                </div>
+            </div>
+
+            <div class="resources-container" id="resourcesContainer">
+                <!-- Resources will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Learning Dashboard</h2>
+                <p class="section-description">Track your progress and achievements</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-ring">
+                        <div class="progress-value" id="overallProgress">0%</div>
+                    </div>
+                    <div class="progress-stats">
+                        <span class="stat-item">
+                            <span class="stat-value" id="completedModules">0</span>
+                            <span class="stat-label">Modules Completed</span>
+                        </span>
+                        <span class="stat-item">
+                            <span class="stat-value" id="totalModules">0</span>
+                            <span class="stat-label">Total Modules</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Current Phase</h3>
+                    <div class="current-phase" id="currentPhase">
+                        <div class="phase-title">Get started with your learning path</div>
+                        <div class="phase-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Achievements</h3>
+                    <div class="achievements" id="achievements">
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🎯</span>
+                            <span class="achievement-name">Getting Started</span>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">📚</span>
+                            <span class="achievement-name">First Module</span>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🔥</span>
+                            <span class="achievement-name">Week Streak</span>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🏆</span>
+                            <span class="achievement-name">Phase Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card full-width">
+                    <h3>Learning Path Progress</h3>
+                    <div class="phase-progress-list" id="phaseProgressList">
+                        <!-- Phase progress will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Generating your personalized learning path...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
