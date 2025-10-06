@@ -1,0 +1,6 @@
+Step,Topic,Description,Resources,Estimated_Time
+1,Network Fundamentals,Basics of networking,https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/entry/ccst.html,3 hrs
+2,Cryptography Basics,Encryption and decryption,https://www.geeksforgeeks.org/cryptography-and-network-security/,5 hrs
+3,Web Security,OWASP top 10,https://owasp.org/www-project-top-ten/,6 hrs
+4,Ethical Hacking,Penetration testing,https://www.freecodecamp.org/news/ethical-hacking-for-beginners/,7 hrs
+5,Cybersecurity Tools,"Wireshark, Metasploit, Nmap",https://tryhackme.com/,8 hrs
