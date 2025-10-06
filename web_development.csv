@@ -1,0 +1,7 @@
+Step,Topic,Description,Resources,Estimated_Time
+1,HTML Basics,Structure of web pages,https://developer.mozilla.org/en-US/docs/Web/HTML,2 hrs
+2,CSS Fundamentals,Styling and layout,https://www.freecodecamp.org/learn/,3 hrs
+3,JavaScript Essentials,Add interactivity,https://javascript.info/,5 hrs
+4,React Basics,Build modern UI,https://react.dev/learn,6 hrs
+5,Backend (Node.js + Express),Server-side logic,https://nodejs.dev/learn,8 hrs
+6,MongoDB,Database basics,https://www.mongodb.com/docs,4 hrs
